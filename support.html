@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Поддержка Floe</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232b3139'/%3E%3Cpath d='M5 23l7-10 4 5 3-4 8 9z' fill='%23f4f6f8'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="support-site">
+
+  <header class="header">
+    <div class="container header-in">
+      <a href="#/" class="logo" aria-label="Поддержка Floe">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9"/><path d="M5 23l7-10 4 5 3-4 8 9z"/></svg>
+        <span>floe</span><em class="logo-tag">поддержка</em>
+      </a>
+      <nav class="header-nav" id="supportNav" aria-label="Разделы поддержки"></nav>
+      <div class="header-user">
+        <a class="nav-link" href="index.html">← На сайт</a>
+        <span id="supportUser"></span>
+      </div>
+    </div>
+  </header>
+
+  <main id="sapp"></main>
+
+  <footer class="footer">
+    <div class="container footer-in">
+      <p class="muted">Поддержка Floe · демо-проект. Ответы сотрудников в демо-режиме приходят автоматически.</p>
+      <nav class="footer-links" aria-label="Информация"><a href="index.html#/guarantee">Как работает гарант</a><a href="index.html#/safety">Правила безопасности</a><a href="index.html">Вернуться на маркетплейс</a></nav>
+    </div>
+  </footer>
+
+  <dialog id="modal" class="modal"></dialog>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+
+  <script src="js/catalog.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/support.js"></script>
+</body>
+</html>

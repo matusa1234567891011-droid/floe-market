@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floe — маркетплейс игровых ценностей</title>
+  <meta name="description" content="Покупка и продажа игровых ценностей с безопасной сделкой и 2FA.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%279%27 fill=%27%232b3139%27/%3E%3Cpath d=%27M5 23l7-10 4 5 3-4 8 9z%27 fill=%27%23f4f6f8%27/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="demo-bar">
+    <b>Демо-версия</b> · оплата и вывод ненастоящие
+  </div>
+
+  <header class="header">
+    <div class="container header-in">
+      <a href="#/" class="logo" aria-label="Floe — на главную">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9"/><path d="M5 23l7-10 4 5 3-4 8 9z"/></svg>
+        <span>floe</span>
+      </a>
+
+      <div class="search">
+        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4.5 4.5"/></svg>
+        <input id="searchInput" type="search" placeholder="Найти игру: CS2, Telegram звёзды, Brawl Stars…" autocomplete="off" aria-label="Поиск игр и приложений" aria-controls="searchResults">
+        <kbd>/</kbd>
+        <ul id="searchResults" class="search-results" role="listbox" hidden></ul>
+      </div>
+
+      <nav class="header-nav" id="headerNav" aria-label="Разделы"></nav>
+      <div class="header-user" id="headerUser"></div>
+    </div>
+  </header>
+
+  <main id="app"></main>
+
+  <footer class="footer">
+    <div class="container footer-in">
+      <div>
+        <a href="#/" class="logo small"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9"/><path d="M5 23l7-10 4 5 3-4 8 9z"/></svg><span>floe</span></a>
+        <p class="muted">Маркетплейс игровых ценностей с безопасной сделкой. Демо-проект.</p>
+        <nav class="footer-links" aria-label="Информация"><a href="#/guarantee">Как работает гарант</a><a href="#/safety">Правила безопасности</a><a href="support.html">Поддержка</a></nav>
+      </div>
+      <p class="muted small">Названия игр и сервисов принадлежат их правообладателям. Floe не связан с ними.</p>
+    </div>
+  </footer>
+
+  <dialog id="modal" class="modal"></dialog>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/images.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
